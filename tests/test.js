@@ -4,11 +4,6 @@ const $cExec = require('../index');
 
 const TEST_CASES = [
   {
-    name: 'should list all files in the directory',
-    command: 'ls',
-    expectedOutput: '.eslintrc.json\n.git\n.gitignore\n.travis.yml\nCONTRIBUTING.md\nLICENSE\nREADME.md\nindex.js\nnode_modules\npackage-lock.json\npackage.json\ntests\n'
-  },
-  {
     name: 'should display contents of .travis.yml file',
     command: 'cat .travis.yml',
     expectedOutput: 'language: node_js\nnode_js:\n  - "node"'
