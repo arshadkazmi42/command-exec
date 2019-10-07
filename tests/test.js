@@ -2,6 +2,21 @@ const { expect } = require('chai');
 
 const $cExec = require('../index');
 
+
+const getCommandNotFoundMessage = () => {
+  console.log(process.platform);
+  const message = {
+    'darwin': 'command not found',
+    'linux': 'not found'
+  };
+
+  if (message[process.platform]) {
+    return message[process.platform];
+  }
+
+  return 'not found';
+};
+
 const TEST_CASES = [
   {
     name: 'should display contents of .travis.yml file',
@@ -19,12 +34,12 @@ const INVALID_TEST_CASES = [
   {
     name: 'should display contents of .travis.yml file',
     command: 'ca .travis.yml',
-    expectedOutput: '/bin/sh: ca: command not found\n'
+    expectedOutput: `/bin/sh: ca: ${getCommandNotFoundMessage()}\n`
   },
   {
     name: 'should go to tests directory and list all files',
     command: 'cm tests && lsy',
-    expectedOutput: '/bin/sh: cm: command not found\n'
+    expectedOutput: `/bin/sh: cm: ${getCommandNotFoundMessage()}\n`
   }
 ];
 
