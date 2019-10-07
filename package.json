@@ -1,0 +1,42 @@
+{
+  "name": "command-exec",
+  "version": "1.0.0",
+  "description": "Shell commands executed for NodeJs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-strongloop": "^2.1.0",
+    "mocha": "^6.2.1"
+  },
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "pretest": "eslint --ignore-path .gitignore .",
+    "test": "node_modules/mocha/bin/mocha tests/*"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arshadkazmi42/command-exec.git"
+  },
+  "keywords": [
+    "shell",
+    "linux",
+    "commands",
+    "executor",
+    "nodejs",
+    "process",
+    "child-process"
+  ],
+  "author": "Arshad Kazmi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arshadkazmi42/command-exec/issues"
+  },
+  "homepage": "https://github.com/arshadkazmi42/command-exec#readme"
+}
