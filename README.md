@@ -36,8 +36,6 @@ const $cExec = require('command-exec');
 
 ```
 
-> Note: Default length is 3, if there is no length input passed
-
 ## Contributing
 
 Interested in contributing to this project?
