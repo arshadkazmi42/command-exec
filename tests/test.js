@@ -3,20 +3,6 @@ const { expect } = require('chai');
 const $cExec = require('../index');
 
 
-const getCommandNotFoundMessage = () => {
-  console.log(process.platform);
-  const message = {
-    'darwin': 'command not found',
-    'linux': 'not found'
-  };
-
-  if (message[process.platform]) {
-    return message[process.platform];
-  }
-
-  return 'not found';
-};
-
 const TEST_CASES = [
   {
     name: 'should display contents of .travis.yml file',
@@ -34,12 +20,20 @@ const INVALID_TEST_CASES = [
   {
     name: 'should display contents of .travis.yml file',
     command: 'ca .travis.yml',
-    expectedOutput: `/bin/sh: ca: ${getCommandNotFoundMessage()}\n`
+    expectedOutput: {
+      'darwin': '/bin/sh: ca: command not found\n',
+      'linux': '/bin/sh: 1: ca: not found\n',
+      'win32': '/bin/sh: 1: cxx: not found\n' // TODO VERIFY WINDOWS ERROR MESSAGE 
+    }
   },
   {
     name: 'should go to tests directory and list all files',
-    command: 'cm tests && lsy',
-    expectedOutput: `/bin/sh: cm: ${getCommandNotFoundMessage()}\n`
+    command: 'cxx tests && lsy',
+    expectedOutput: {
+      'darwin': '/bin/sh: cxx: command not found\n',
+      'linux': '/bin/sh: 1: cxx: not found\n',
+      'win32': '/bin/sh: 1: cxx: not found\n'  // TODO VERIFY WINDOWS ERROR MESSAGE 
+    }
   }
 ];
 
@@ -61,7 +55,7 @@ describe('Validates failed executed commands', () => {
         try {
           await $cExec(testCase.command);
         } catch (err) {
-          expect(err).to.equal(testCase.expectedOutput);
+          expect(err).to.equal(testCase.expectedOutput[process.platform]);
         }
       });
     }
