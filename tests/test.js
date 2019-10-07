@@ -6,7 +6,7 @@ const TEST_CASES = [
   {
     name: 'should list all files in the directory',
     command: 'ls',
-    expectedOutput: '.eslintrc.json\n.git\n.gitignore\n.travis.yml\nLICENSE\nREADME.md\nindex.js\nnode_modules\npackage-lock.json\npackage.json\ntests\n'
+    expectedOutput: '.eslintrc.json\n.git\n.gitignore\n.travis.yml\nCONTRIBUTING.md\nLICENSE\nREADME.md\nindex.js\nnode_modules\npackage-lock.json\npackage.json\ntests\n'
   },
   {
     name: 'should display contents of .travis.yml file',
@@ -24,7 +24,7 @@ describe('Validates executed commands', () => {
   for (let testCase of TEST_CASES) {
     if (testCase.expectedOutput) {
       it(testCase.name, async () => {
-        const actualResult = await $exec(testCase.command);
+        const actualResult = await $cExec(testCase.command);
         expect(actualResult).to.equal(testCase.expectedOutput);
       });
     }
