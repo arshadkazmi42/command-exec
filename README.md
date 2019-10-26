@@ -1,6 +1,8 @@
 # command-exec
 
 [![Build](https://img.shields.io/travis/com/arshadkazmi42/command-exec.svg)](https://travis-ci.com/arshadkazmi42/command-exec/)
+[![Contributors](https://img.shields.io/github/contributors/arshadkazmi42/command-exec.svg)](https://github.com/arshadkazmi42/command-exec/graphs/contributors)
+
 
 Execute promisified shell (linux) commands in Nodejs
 
