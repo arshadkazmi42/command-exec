@@ -1,6 +1,6 @@
 {
   "name": "command-exec",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shell commands executed for NodeJs",
   "main": "index.js",
   "directories": {

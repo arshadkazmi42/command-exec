@@ -1,6 +1,6 @@
 # command-exec
 
-[![Build](https://img.shields.io/travis/com/arshadkazmi42/command-exec.svg)](https://travis-ci.com/arshadkazmi42/command-exec/)
+[![Build](https://github.com/arshadkazmi42/command-exec/actions/workflows/nodejs.yml/badge.svg)](https://github.com/arshadkazmi42/command-exec/actions/workflows/nodejs.yml)
 [![Contributors](https://img.shields.io/github/contributors/arshadkazmi42/command-exec.svg)](https://github.com/arshadkazmi42/command-exec/graphs/contributors)
 
 
