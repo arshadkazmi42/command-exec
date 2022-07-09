@@ -1,7 +1,12 @@
 # command-exec
 
 [![Build](https://github.com/arshadkazmi42/command-exec/actions/workflows/nodejs.yml/badge.svg)](https://github.com/arshadkazmi42/command-exec/actions/workflows/nodejs.yml)
+[![NPM Version](https://img.shields.io/npm/v/command-exec.svg)](https://www.npmjs.com/package/command-exec)
+[![NPM Downloads](https://img.shields.io/npm/dt/command-exec.svg)](https://www.npmjs.com/package/command-exec)
+[![Github Repo Size](https://img.shields.io/github/repo-size/arshadkazmi42/command-exec.svg)](https://github.com/arshadkazmi42/command-exec)
+[![LICENSE](https://img.shields.io/npm/l/command-exec.svg)](https://github.com/arshadkazmi42/command-exec/blob/master/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/arshadkazmi42/command-exec.svg)](https://github.com/arshadkazmi42/command-exec/graphs/contributors)
+[![Commit](https://img.shields.io/github/last-commit/arshadkazmi42/command-exec.svg)](https://github.com/arshadkazmi42/command-exec/commits/master)
 
 
 Execute promisified shell (linux) commands in Nodejs
