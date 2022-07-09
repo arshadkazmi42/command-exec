@@ -5,9 +5,9 @@ const $cExec = require('../index');
 
 const TEST_CASES = [
   {
-    name: 'should display contents of .travis.yml file',
-    command: 'cat .travis.yml',
-    expectedOutput: 'language: node_js\nnode_js:\n  - "node"'
+    name: 'should display contents of .gitignore file',
+    command: 'cat .gitignore',
+    expectedOutput: 'node_modules\n'
   },
   {
     name: 'should go to tests directory and list all files',
@@ -18,8 +18,8 @@ const TEST_CASES = [
 
 const INVALID_TEST_CASES = [
   {
-    name: 'should display contents of .travis.yml file',
-    command: 'ca .travis.yml',
+    name: 'should throw command not found error',
+    command: 'ca .gitignore',
     expectedOutput: {
       'darwin': '/bin/sh: ca: command not found\n',
       'linux': '/bin/sh: 1: ca: not found\n',
